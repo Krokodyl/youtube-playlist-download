@@ -2,15 +2,14 @@ import os
 import subprocess
 
 from pytube import YouTube, Playlist
-from pytube.exceptions import VideoUnavailable
 from pathlib import Path
 
 print("Downloading...")
-# yt = YouTube("https://youtu.be/rCrkSxcuhl0?list=PLFu2J9pEwhz0Zf_PWs-cSakqnRZBfRIo9") 
+# yt = YouTube("https://youtu.be/rCrkSxcuhl0?list=PLFu2J9pEwhz0Zf_PWs-cSakqnRZBfRIo9")
 
 # accessing audio streams of YouTube obj.(first one, more available)
 #stream = yt.streams.filter(only_audio=True).first()
-# downloading a video would be: stream = yt.streams.first() 
+# downloading a video would be: stream = yt.streams.first()
 
 # download into working directory
 #stream.download()
@@ -24,7 +23,7 @@ for video in playlist.videos:
 	if count < start:
 		count = count+1
 		continue
-	
+
 	# file exists
 	try:
 		stream = video.streams.filter(only_audio=True).first()
